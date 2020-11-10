@@ -1,3 +1,4 @@
+@import url("https://images6.alphacoders.com/451/451184.jpg");
 
 @mixin bg-mixin ($display) {
     display: $display;
@@ -31,7 +32,7 @@
   .container {
     @include bg-mixin(flex);
     justify-content:flex-start;
-    background-color:black;
+    background-color:black;        
     width:100%;
     height:100px;
     text-decoration: none;
@@ -64,11 +65,11 @@
      @include bg-mixin(flex);
      justify-content: center;
      align-items: center;
-     background-image: url("https://tse1.mm.bing.net/th?id=OIP.XS5KsCv735MgZxwtG8CVSQHaGE&pid=Api&P=0&w=213&h=175");
-     background-repeat: no-repeat;
+     background-image: url("https://images6.alphacoders.com/451/451184.jpg");
+     background-repeat: repeat;
      background-size: cover;
      width: 100%;
-     height: 75vh;
+     height: 100%;
      
  }
  .foot-links {
