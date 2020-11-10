@@ -1,0 +1,107 @@
+
+@mixin bg-mixin ($display) {
+    display: $display;
+    justify-content:space-around;
+    align-items:center;
+    @content;
+  }
+  @mixin new-color ($new-color){
+      color:$new-color;
+  }
+  $red-color: red;
+  $bgcolor: darkgrey;
+  $font-color: white;
+  body {
+    margin:0;
+    color:$font-color;
+    background-color:$bgcolor;
+    offset: hidden;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+   
+    
+  }
+  .navbar {
+    @include bg-mixin(flex);
+    width:100%;  
+    justify-content:flex-start;
+    
+    
+  }
+  .container {
+    @include bg-mixin(flex);
+    justify-content:flex-start;
+    background-color:black;
+    width:100%;
+    height:100px;
+    text-decoration: none;
+  }
+   .container img {
+    width:10%;
+     
+  }
+  .container  ul  {
+    list-style-type: none;
+    @include bg-mixin(flex);
+    width:100%;
+    color:$red-color;
+    
+  }
+  .navbar .container ul  li a {
+     font-size:1.2em;
+     padding:2px;
+     border: 5px solid $red-color;
+     text-decoration: none;
+     color:$font-color
+     
+}
+  .navbar .container ul li a:hover {
+    color: $red-color;    
+    transition: 0.5s;
+    box-shadow: inset 0 0 100px 100px rgba(248, 244, 244, 0.5);
+ }
+ .hero-section{
+     @include bg-mixin(flex);
+     justify-content: center;
+     align-items: center;
+     background-image: url("https://tse1.mm.bing.net/th?id=OIP.XS5KsCv735MgZxwtG8CVSQHaGE&pid=Api&P=0&w=213&h=175");
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 75vh;
+     
+ }
+ .foot-links {
+     @include bg-mixin(flex);
+     justify-content: space-between;
+     @include new-color(yellow);
+     background-color: black;
+     width: 100%;
+     height: 200px;
+ }
+ .foot-links ul {
+    list-style-type: none;
+    @include bg-mixin(flex);
+    width:100%;
+    color:$red-color;
+ }
+ .foot-links li {
+    font-size:1.2em;
+    padding:2px;    
+    text-decoration: none;
+    color:$font-color;
+ }
+ .foot-links ul li a {
+    font-size:1.2em;
+    padding:2px;
+    border: 5px solid $red-color;
+    text-decoration: none;
+    color:$font-color;
+
+ }
+ .foot-links ul li a:hover {
+    color: $red-color;    
+    transition: 0.5s;
+    box-shadow: inset 0 0 100px 100px rgba(248, 244, 244, 0.5);
+ }
+ 
